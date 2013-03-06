@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body { background: black; }
+        h1, h2, h3 { font-family: Helvetica; text-align: center; color: white }
+        
+        #wrap { background: url('image/background.png'); }
+        #content { margin: 200px; padding: 20px; background: rgba(0, 0, 0, 0.4); border-radius: 10px }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="lib/rint.jquery.matchScreen.js"></script>
+    <script>
+        $(document).ready(function () {
+            /* $(selector).matchScreen(options) */
+            $('#wrap').matchScreen({
+                width: 1024,
+                height: 576,
+                /* minimum: 0.5 *//* minimum scale */
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <h1>Match Screen Basic</h1>
+            <h2>CSS3 Transform</h2>
+            <h3>Scale all inside the element.</h3>
+        </div>
+    </div>
+</body>
+</html>
